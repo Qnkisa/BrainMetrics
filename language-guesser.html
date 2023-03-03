@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for your brain | Brain Metrics</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Brain Metrics</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <ion-icon name="settings-outline" class="hamburger-icon"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="typing-test-container">
+        <h1 id="language-guesser-heading">Language Guesser</h1>
+        <div class="typing-test-container-hide" id="language-guesser-container-hide">
+            <ion-icon name="language-outline" class="test-icon-1"></ion-icon>
+            <p>As soon as you click the <span style="font-weight:bold;">generate quiz</span> button to start the test.</p>
+            <a href="#" id="generate-language-test" onclick="createLanguageQuiz()">Generate Quiz</a>
+        </div>
+        <div class="language-guesser-container-show" id="language-guesser-container-show">
+            <div class="language-guesser-quiz" id="language-guesser-quiz">
+
+            </div>
+            <div class="language-guesser-submit-quiz">
+                <a href="#" id="submit-language-quiz">Submit quiz</a>
+            </div>
+        </div>
+        <div class="retake-quiz" id="retake-language-quiz">
+            <a href="#" id="retake-language-test">Retake Quiz</a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Brain Metrics</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>@2023 Brain Metrics</p>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+
+
+    <script src="scripts/language-guesser.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

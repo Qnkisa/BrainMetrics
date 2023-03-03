@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for your brain | Brain Metrics</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Brain Metrics</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <ion-icon name="settings-outline" class="hamburger-icon"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <div class="reaction-time-container" id="reaction-time-container">
+        <h1 id="reaction-time-container-heading">Reaction Time Test</h1>
+        <ion-icon name="speedometer-outline" class="test-icon-1" id="reaction-time-spedometer"></ion-icon>
+        <ion-icon name="alert-circle-outline" class="test-icon-1" id="reaction-time-alert"></ion-icon>
+        <ion-icon name="ellipsis-horizontal-outline" class="test-icon-1" id="reaction-time-waiting"></ion-icon>
+        <p id="reaction-time-container-result">When this container turns red, click as quickly as you can.</p>
+        <span id="reaction-time-container-span">Click on this container to start.</span>
+        <a href="#" id="reaction-time-try-again">Try Again</a>
+    </div>
+
+    
+    <div class="reaction-time-description">
+        <div class="reaction-time-div">
+            <h2>About this test</h2>
+            <p>With this test you can measure your reaction time.</p>
+            <p>It helps users track their progress, identify weaknesses, and practice in a fun and engaging way. It's beneficial for driving, sports, work-related tasks, and other activities that require quick reactions.</p>
+            <p>In addition to measuring your reaction time, this test is affected by the latency of your computer and monitor. Using a fast computer and low latency / high framerate monitor will improve your score.</p>
+        </div>
+        <div class="reaction-time-div">
+            <img src="images/reaction-time-graph.png" alt="">
+        </div>
+    </div>
+
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Brain Metrics</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>@2023 Brain Metrics</p>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+
+
+    <script src="scripts/reaction-time.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --lime:#32CD32;
+    --ff-headings:'Kanit', sans-serif;
+    --ff-text:'Roboto', sans-serif;
+}
+
+header{
+    padding: 1rem 5rem;
+    background-color: var(--lime);
+}
+
+nav{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    z-index: 10000;
+}
+
+nav ul li a{
+    font-size: 2rem;
+    font-family: var(--ff-headings);
+    color: white;
+    text-decoration: none;
+    transition: bottom .3s;
+}
+
+nav ul li a:hover{
+    position: relative;
+    bottom: 3px;
+}
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-icon{
+    font-size: 2.5rem;
+    color:white;
+}
+
+/*index hero start*/
+
+.index-hero{
+    margin: 75px auto;
+    text-align: center;
+}
+
+.index-hero img{
+    width: 200px;
+}
+
+.index-hero h1{
+    font-size: 4rem;
+    font-family: var(--ff-headings);
+    color: var(--lime);
+}
+
+.index-hero h2{
+    font-size: 2rem;
+    font-family: var(--ff-text);
+    color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--lime);
+    margin-bottom: 40px;
+}
+
+.index-arrow{
+    font-size: 4rem;
+    color: var(--lime);
+    transition: all .3s;
+}
+
+.index-arrow:hover{
+    transform: scale(1.2);
+}
+
+/*tests div start*/
+
+.tests-big-div{
+    background-color: var(--lime);
+    color: white;
+    padding: 5rem;
+    text-align: center;
+}
+
+.tests-div{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+
+.test{
+    background-color: white;
+    display: block;
+    transition: all .3s;
+}
+
+.test a{
+    padding: 2rem;
+    display: block;
+    text-decoration: none;
+    color: var(--lime);
+}
+
+.test:hover{
+    transform: scale(1.05);
+}
+
+.test p{
+    font-size: 2.5rem;
+    font-family: var(--ff-headings);
+    margin-bottom: 25px;
+}
+
+.test-icon{
+    font-size: 6rem;
+}
+
+/*footer start*/
+
+footer{
+    padding: 5rem;
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid var(--lime);
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-family: var(--ff-headings);
+    font-size: 2rem;
+    color: var(--lime);
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer-bottom p{
+    font-size: 1.5rem;
+    font-family: var(--ff-headings);
+    color: var(--lime);
+    margin-bottom: 15px;
+}
+
+.footer-bottom span{
+    font-family: var(--ff-text);
+    color: var(--lime);
+    opacity: 0.7;
+}
+
+/*about page start*/
+
+.about-container{
+    margin: 80px auto;
+    text-align: center;
+    max-width: 1200px;
+    padding: 0 5rem;
+}
+
+.about-container h1{
+    font-size: 4rem;
+    font-family: var(--ff-headings);
+    color: var(--lime);
+    margin-bottom: 50px;
+}
+
+.about-container p{
+    font-size: 2rem;
+    font-family: var(--ff-text);
+    margin-bottom: 20px;
+    color: var(--lime);
+    opacity: 0.7;
+}
+
+.about-container p a{
+    color: black;
+    font-weight: bold;
+}
+
+/*reaction time container start*/
+.reaction-time-container{
+    width: 100%;
+    margin: 50px auto;
+    color:white;
+    background-color: var(--lime);
+    text-align: center;
+    padding: 2rem 5rem;
+    cursor: pointer;
+}
+
+.reaction-time-container h1{
+    font-size: 4rem;
+    font-family: var(--ff-headings);
+    margin-bottom: 20px;
+}
+
+.test-icon-1{
+    font-size: 8rem;
+    margin-bottom: 20px;
+}
+
+.reaction-time-container p{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    margin-bottom: 10px;
+}
+
+.reaction-time-container span{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#reaction-time-alert{
+    display: none;
+    text-align: center;
+    margin: auto;
+}
+
+#reaction-time-waiting{
+    display: none;
+    text-align: center;
+    margin: auto;
+}
+
+#reaction-time-try-again{
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    transition: all .3s;
+    border: 1px solid white;
+    display: none;
+}
+
+#reaction-time-try-again:hover{
+    transform: scale(1.1);
+}
+
+.reaction-time-description{
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    text-align: center;
+    padding: 0 2.5rem;
+}
+
+.reaction-time-description h2{
+    font-size: 2.5rem;
+    font-family: var(--ff-headings);
+    color: var(--lime);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.reaction-time-description p{
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: var(--ff-text);
+    font-size: 1.25rem;
+    color: var(--lime);
+    opacity: 0.7;
+}
+
+
+
+/*aim trainer container start*/
+
+.aim-trainer-container{
+    margin: 50px auto;
+    text-align: center;
+    padding: 2rem 5rem;
+    color: white;
+    background-color: var(--lime);
+    width: 100%;
+    position: relative;
+}
+
+.aim-trainer-container h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: var(--ff-headings);
+}
+
+.aim-trainer-container p{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    font-weight: bold;
+}
+
+.spots{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spot{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--lime);
+    position: absolute;
+    display: none;
+}
+
+.spot.active{
+    display: block;
+}
+
+.aim-trainer{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    display: none;
+    margin: 20px auto;
+}
+
+#start-aim-trainer{
+    display: block;
+    background-color: white;
+    width: 150px;
+    margin: 15px auto;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--lime);
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+    border: 1px solid white;
+    transition: all .3s;
+}
+
+#start-aim-trainer:hover{
+    background-color: var(--lime);
+    color: white;
+}
+
+#aim-trainer-retake{
+    display: block;
+    background-color: white;
+    width: 150px;
+    margin: 15px auto;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--lime);
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+    border: 1px solid white;
+    transition: all .3s;
+    display: none;
+}
+
+#aim-trainer-retake:hover{
+    background-color: var(--lime);
+    color: white;
+}
+
+.small-screen-text{
+    display: none;
+}
+
+/*typing test start*/
+
+.typing-test-container{
+    margin: 50px auto;
+    background-color: var(--lime);
+    color: white;
+    text-align: center;
+    padding: 2rem 5rem;
+}
+
+.typing-test-container h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: var(--ff-headings);
+}
+
+.typing-test-container p{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    margin-bottom: 15px;
+}
+
+.typing-test-container a{
+    text-decoration: none;
+    color: var(--lime);
+    background-color: white;
+    width: 175px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    transition: all .3s;
+}
+
+.typing-test-container a:hover{
+    color: white;
+    background-color: var(--lime);
+}
+
+.typing-test-container-display{
+    max-width: 800px;
+    margin: 10px auto;
+    font-weight: normal;
+    padding: 2rem;
+    color: var(--lime);
+    background-color: white;
+}
+
+.typing-test-container p{
+    font-size: 1.5rem;
+    line-height: 40px;
+}
+
+.typing-test-container input{
+    width: 90%;
+    margin: 10px auto;
+    height: 45px;
+    font-size: 1.25rem;
+    padding-left: 20px;
+    outline: none;
+    font-family: var(--ff-text);
+    background-color: var(--lime);
+    border: 1px solid white;
+    color: white;
+}
+
+.typing-test-container input::placeholder{
+    color: white;
+}
+
+#typing-test-container-display{
+    display: none;
+}
+
+.retake-test a{
+    display: block;
+    width: 150px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    background-color: var(--lime);
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    border: 1px solid white;
+    transition: all .3s;
+    display: none;
+}
+
+.retake-test a:hover{
+    transform: scale(1.1);
+}
+
+.language-guesser-container-show{
+    display: none;
+}
+
+#retake-language-quiz{
+    display: none;
+}
+
+.radio-button-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    color: var(--light-red);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+.radio-button-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+.radio-button-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.radio-button-container input:checked ~ .checkmark {
+    background-color: red;
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.radio-button-container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.radio-button-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.language-guesser-quiz{
+    max-width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    border: 3px solid white;
+    padding: 1rem 3rem;
+}
+
+.quiz-container{
+    margin-bottom: 50px;
+}
+
+/*media queries start*/
+
+@media (max-width:1300px) {
+    .reaction-time-description{
+        display: block;
+    }
+
+    .reaction-time-div{
+        margin-bottom: 35px;
+    }
+
+    .reaction-time-description h2{
+        text-align: center;
+    }
+
+    .reaction-time-description p{
+        text-align: center;
+    }
+}
+
+@media (max-width:800px) {
+    .tests-div{
+        display: block;
+    }
+
+    .test{
+        margin-bottom: 50px;
+    }
+
+    .about-container{
+        margin: 50px auto;
+    }
+
+    .about-container h1{
+        font-size: 2.25rem;
+        margin-bottom: 15px;
+    }
+
+    .about-container p{
+        font-size: 1.25rem;
+    }
+
+    .reaction-time-container{
+        padding: 1rem 2.5rem;
+    }
+
+    .reaction-time-container h1{
+        font-size: 2.25rem;
+        margin-bottom: 0;
+    }
+
+    .test-icon-1{
+        font-size: 5rem;
+    }
+
+    .reaction-time-container p{
+        font-size: 1rem;
+    }
+
+    .reaction-time-container span{
+        font-size: 0.85rem;
+    }
+
+    .reaction-time-description h2{
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+
+    .reaction-time-description p{
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .reaction-time-description img{
+        width: 200px;
+    }
+
+    .radio-button-container{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:600px) {
+    header{
+        padding: 1rem 1.5rem;
+    }
+
+    nav{
+        justify-content: flex-end;
+    }
+    
+    nav ul{
+        position: absolute;
+        top: -220px;
+        background-color: var(--lime);
+        width: 100%;
+        left: 0;
+        display: block;
+        text-align: center;
+        transition: all .3s;
+        border-bottom: 5px solid white;
+    }
+
+    #menu.active{
+        top: 60px;
+    }
+
+    nav ul li{
+        margin: 25px auto;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger-icon{
+        transition: all .3s;
+    }
+
+    .hamburger.active .hamburger-icon{
+        rotate: 45deg;
+    }
+
+    .index-hero{
+        margin: 50px auto;
+        padding: 0 2rem;
+    }
+
+    .index-hero img{
+        width: 125px;
+    }
+
+    .index-hero h1{
+        font-size: 2.25rem;
+    }
+
+    .index-hero h2{
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        margin-bottom: 35px;
+    }
+
+    .index-arrow{
+        font-size: 2.5rem;
+    }
+
+    .tests-big-div{
+        padding: 2rem;
+    }
+
+    .test{
+        padding: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .test p{
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .test-icon{
+        font-size: 3.5rem;
+    }
+
+    footer ul{
+        display: block;
+    }
+
+    footer ul li{
+        margin: 25px auto;
+    }
+
+    .about-container{
+        padding: 0 2.5rem;
+    }
+
+    .aim-trainer-container{
+        padding: 1rem 2.5rem;
+    }
+
+    .aim-trainer-container h1{
+        font-size: 2.25rem;
+    }
+
+    #start-aim-trainer{
+        display: none;
+    }
+
+    .small-screen-text{
+        display: block;
+    }
+
+    .big-screen-text{
+        display: none;
+    }
+
+    .typing-test-container h1{
+        font-size: 2.25rem;
+        margin-bottom: 10px;
+    }
+
+    .typing-test-container-hide p{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    .typing-test-container a{
+        font-size: 1rem;
+        padding: 7px;
+        width: 115px;
+    }
+
+    .typing-test-container-display{
+        padding: 1rem;
+    }
+
+    .typing-test-container-display p{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    #typing-test-input{
+        font-size: 1rem;
+        height: 35px;
+    }
+
+    .typing-test-container{
+        padding: 1rem 2.5rem;
+    }
+
+    .typing-test-container h1{
+        font-size: 2.25rem;
+    }
+}
